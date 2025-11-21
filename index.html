@@ -1,73 +1,152 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GRACE RUSSIA</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">GRACE RUSSIA</div>
-        <nav>
-            <a href="index.html">О проекте</a>
-            <a href="#account">Пополнить счет</a>
-            <a href="https://vk.com/gracerussia_tp">Техподдержка</a>
-            <a href="https://gracerussia-forum.hgweb.ru">Форум</a>
-        </nav>
-        <div class="buttons">
-            <a href="[URL Rustore]" class="button">RUSTORE</a>
-            <a href="[URL IOS]" class="button">IOS</a>
-            <a href="#download" class="button">Скачать с сайта</a>
-        </div>
-    </header>
+ <!DOCTYPE html>
+ <html lang="ru">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRACE RUSSIA</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+  /* Скрываем основную навигацию и кнопки по умолчанию */
+  nav, .buttons {
+  display: none;
+  }
 
-    <section class="hero">
-        <h1>СКАЧАЙ НАШ ЛАУНЧЕР И НАЧНИ ИГРАТЬ!</h1>
-        <p>Играть на нашем проекте очень просто. Достаточно скачать наш лаунчер, который сам установит все необходимые компоненты игры.</p>
-        <a href="[URL файла для скачивания]" class="download-button">СКАЧАТЬ С САЙТА</a>
-        <p class="android-req">ТРЕБУЕТСЯ ANDROID 6.1</p>
-    </section>
+  /* Стили для мобильного меню */
+  .mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  }
 
-    <section class="characters">
-        <div class="character">
-            <img src="[URL изображения персонажа 1]" alt="Полицейский">
-            <p>Стань полицейским</p>
-        </div>
-        <!-- ... другие персонажи ... -->
-    </section>
+  .menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  }
 
-    <footer class="footer">
-        <div>
-            <img src="[URL логотипа]" alt="GRACE RUSSIA">
-            <p>Игроков: 164</p>
-            <p>Игра бесплатна и не требует денежных средств...</p>
-            <div class="social">
-                <a href="https://t.me/gracerussia">Telegram</a>
-                <a href="https://vk.com/gracerussiabonus">VK</a>
-            </div>
-        </div>
-        <p>Copyright © 2025 GRACE RUSSIA. Все права защищены.</p>
-        <div class="legal">
-            <a>ДОГОВОР ОФЕРТЫ</a>
-            <a>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
-        </div>
-        <div class="payments">
-            <span>VISA</span>
-            <span>МИР</span>
-            <span>сбп</span>
-        </div>
-    </footer>
+  /* Стили для выпадающего меню */
+  .mobile-menu {
+  display: none; /* Скрыто по умолчанию */
+  position: absolute;
+  top: 60px; /* Под шапкой */
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  }
 
-    <section id="account">
-        <h2>Пополнить счет</h2>
-        <p>Здесь будет информация о пополнении счета.</p>
-    </section>
+  .mobile-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 15px;
+  }
 
-    <section id="download">
-        <h2>Скачать</h2>
-        <p>Здесь будет ссылка на скачивание.</p>
-    </section>
+  .mobile-menu a:hover {
+  background-color: #ff8c00;
+  }
 
-</body>
-</html>
+  /* Показываем мобильное меню при ширине экрана 768px и менее */
+  @media (max-width: 768px) {
+  header {
+  flex-direction: row; /* Возвращаем обычное отображение в строку */
+  justify-content: space-between; /* Размещаем элементы по краям */
+  }
+
+  .mobile-nav {
+  display: flex; /* Показываем мобильную навигацию */
+  width: 100%;
+  }
+
+  /* JavaScript добавляет класс 'active' для отображения меню */
+  .mobile-menu.active {
+  display: block;
+  }
+  }
+  </style>
+ </head>
+ <body>
+  <header>
+  <div class="mobile-nav">
+  <div class="logo">GRACE RUSSIA</div>
+  <div class="menu-icon"><i class="fa fa-bars"></i></div>
+  </div>
+
+  <div class="mobile-menu">
+  <a href="https://gracerussia-forum.hgweb.ru">Форум</a>
+  <a href="https://vk.com/gracerussia_tp">Техподдержка</a>
+  <a href="#account">Пополнить счет</a>
+  </div>
+
+  <nav>
+  <a href="index.html">О проекте</a>
+  <a href="#account">Пополнить счет</a>
+  <a href="https://vk.com/gracerussia_tp">Техподдержка</a>
+  <a href="https://gracerussia-forum.hgweb.ru">Форум</a>
+  </nav>
+  <div class="buttons">
+  <a href="[URL Rustore]" class="button">RUSTORE</a>
+  <a href="[URL IOS]" class="button">IOS</a>
+  <a href="#download" class="button">Скачать с сайта</a>
+  </div>
+  </header>
+
+  <section class="hero">
+  <h1>СКАЧАЙ НАШ ЛАУНЧЕР И НАЧНИ ИГРАТЬ!</h1>
+  <p>Играть на нашем проекте очень просто. Достаточно скачать наш лаунчер, который сам установит все необходимые компоненты игры.</p>
+  <a href="[URL файла для скачивания]" class="download-button">СКАЧАТЬ С САЙТА</a>
+  <p class="android-req">ТРЕБУЕТСЯ ANDROID 6.1</p>
+  </section>
+
+  <section class="characters">
+  <div class="character">
+  <img src="[URL изображения персонажа 1]" alt="Полицейский">
+  <p>Стань полицейским</p>
+  </div>
+  </section>
+
+  <footer class="footer">
+  <div>
+  <img src="[URL логотипа]" alt="GRACE RUSSIA">
+  <p>Игроков: 164</p>
+  <p>Игра бесплатна и не требует денежных средств...</p>
+  <div class="social">
+  <a href="https://t.me/gracerussia">Telegram</a>
+  <a href="https://vk.com/gracerussiabonus">VK</a>
+  </div>
+  </div>
+  <p>Copyright © 2025 GRACE RUSSIA. Все права защищены.</p>
+  <div class="legal">
+  <a>ДОГОВОР ОФЕРТЫ</a>
+  <a>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+  </div>
+  <div class="payments">
+  <span>VISA</span>
+  <span>МИР</span>
+  <span>сбп</span>
+  </div>
+  </footer>
+
+  <section id="account">
+  <h2>Пополнить счет</h2>
+  <p>Здесь будет информация о пополнении счета.</p>
+  </section>
+
+  <section id="download">
+  <h2>Скачать</h2>
+  <p>Здесь будет ссылка на скачивание.</p>
+  </section>
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.querySelector('.menu-icon');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  menuIcon.addEventListener('click', function() {
+  mobileMenu.classList.toggle('active');
+  });
+  });
+  </script>
+ </body>
+ </html>
